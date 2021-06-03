@@ -22,5 +22,9 @@ Folgende Schritte sind zu durchzuführen
 Happy coding!
 
 
+Exercise2 GitHub Repository
+
+### https://github.com/AnnaLeitner/exercise2.git
+
 
  
