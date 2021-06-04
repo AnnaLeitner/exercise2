@@ -10,7 +10,7 @@ public abstract class State extends Subject {
 
     public abstract String getColor();
 
-    public String getString(){
+    public String getSting(){
         return getColor();
     }
 }

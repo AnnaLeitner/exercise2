@@ -19,7 +19,7 @@ public class TrafficLightCtrl {
 
     private boolean doRun = true;
 
-    private static TrafficLightCtrl ctrl;
+    private static TrafficLightCtrl ctrl = null;
 
     public static TrafficLightCtrl getInstance() {
         if(ctrl == null){
