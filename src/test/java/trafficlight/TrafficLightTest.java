@@ -18,15 +18,27 @@ public class TrafficLightTest {
     }
 
     @Test
-    @DisplayName("Valid: GreenState FirstState")
+    @DisplayName("Valid: Green FirstState")
     public void singletonFirstState(){
         assertEquals(TrafficLightCtrl.getInstance().getCurrentState(), TrafficLightCtrl.getInstance().getGreenState());
     }
+    @Test
+    @DisplayName("Invalid: Red FirstState")
+    public void singletonFirstStateFalse1(){
+        assertNotEquals(TrafficLightCtrl.getInstance().getCurrentState(), TrafficLightCtrl.getInstance().getRedState());
+    }
+    @Test
+    @DisplayName("Invalid: Yellow FirstState")
+    public void singletonFirstStateFalse2(){
+        assertNotEquals(TrafficLightCtrl.getInstance().getCurrentState(), TrafficLightCtrl.getInstance().getYellowState());
+    }
 
     @Test
-    @DisplayName("Invalid: GreenState FirstState")
-    public void singletonFirstStateFalse(){
-        assertNotEquals(TrafficLightCtrl.getInstance().getCurrentState(), TrafficLightCtrl.getInstance().getRedState());
+    @DisplayName("Valid: Yellow SecondState")
+    public void singletonSecondState(){
+        TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        ctrl.nextState();
+        assertEquals(ctrl.getCurrentState(), ctrl.getYellowState());
     }
 
 
