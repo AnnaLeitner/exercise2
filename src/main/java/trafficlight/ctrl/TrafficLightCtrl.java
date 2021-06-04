@@ -131,4 +131,11 @@ public class TrafficLightCtrl {
     public void stop() {
         doRun = false;
     }
+
+    public void clearState(){
+        currentState = greenState;
+        previousState = yellowState;
+
+    }
+
 }

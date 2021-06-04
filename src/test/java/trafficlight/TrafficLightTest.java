@@ -21,12 +21,14 @@ public class TrafficLightTest {
     @DisplayName("Valid: Green FirstState")
     public void singletonFirstState(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        ctrl.clearState();
         assertSame(ctrl.getCurrentState(), ctrl.getGreenState());
     }
     @Test
     @DisplayName("Valid: Yellow SecondState")
     public void singletonSecondState(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        ctrl.clearState();
         for(int i = 0; i < 1; i++){
             ctrl.nextState();
         }
@@ -37,6 +39,7 @@ public class TrafficLightTest {
     @DisplayName("Valid: Red ThirdState")
     public void singletonThirdState(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        ctrl.clearState();
         for(int i = 0; i < 2; i++){
             ctrl.nextState();
         }
@@ -46,6 +49,7 @@ public class TrafficLightTest {
     @DisplayName("Valid: Yellow FourthState")
     public void singletonFourthState(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        ctrl.clearState();
         for(int i = 0; i < 3; i++){
             ctrl.nextState();
         }
@@ -55,6 +59,7 @@ public class TrafficLightTest {
     @DisplayName("Valid: Yellow FifthState")
     public void singletonFifthState(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        ctrl.clearState();
         for(int i = 0; i < 4; i++){
             ctrl.nextState();
         }
