@@ -55,4 +55,15 @@ public class TrafficLightTest {
         assertNotEquals(ctrl.getCurrentState(), ctrl.getRedState());
     }
 
+    @Test
+    @DisplayName("Valid: Red ThirdState")
+    public void singletonThirdState(){
+        TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        for(int i = 0; i<=1; i++){
+            ctrl.nextState();
+        }
+        assertEquals(ctrl.getCurrentState(), ctrl.getRedState());
+    }
+
+
 }
