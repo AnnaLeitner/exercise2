@@ -64,6 +64,23 @@ public class TrafficLightTest {
         }
         assertEquals(ctrl.getCurrentState(), ctrl.getRedState());
     }
-
+    @Test
+    @DisplayName("Invalid: Yellow ThirdState")
+    public void singletonThirdStateFalse1(){
+        TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        for(int i = 0; i<=1; i++){
+            ctrl.nextState();
+        }
+        assertNotEquals(ctrl.getCurrentState(), ctrl.getYellowState());
+    }
+    @Test
+    @DisplayName("Invalid: Green ThirdState")
+    public void singletonThirdStateFalse2(){
+        TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
+        for(int i = 0; i<=1; i++){
+            ctrl.nextState();
+        }
+        assertNotEquals(ctrl.getCurrentState(), ctrl.getGreenState());
+    }
 
 }
