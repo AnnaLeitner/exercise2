@@ -48,7 +48,7 @@ public class TrafficLightTest {
         assertNotEquals(ctrl.getCurrentState(), ctrl.getGreenState());
     }
     @Test
-    @DisplayName("Invalid: Greens SecondState")
+    @DisplayName("Invalid: Red SecondState")
     public void singletonSecondStateFalse2(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
         ctrl.nextState();
