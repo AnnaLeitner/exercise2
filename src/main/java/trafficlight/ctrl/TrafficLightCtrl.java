@@ -108,6 +108,8 @@ public class TrafficLightCtrl {
         return yellowState;
     }
 
+    public State getCurrentState(){return this.currentState;}
+
     public void run()  {
         int intervall = 1500;
         while (doRun) {
