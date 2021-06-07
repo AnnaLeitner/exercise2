@@ -29,9 +29,7 @@ public class TrafficLightTest {
     public void singletonSecondState(){
         TrafficLightCtrl ctrl = TrafficLightCtrl.getInstance();
         ctrl.clearState();
-        for(int i = 0; i < 1; i++){
-            ctrl.nextState();
-        }
+        ctrl.nextState();
 
         assertEquals(ctrl.getCurrentState(), ctrl.getYellowState());
     }
